@@ -1,0 +1,39 @@
+.navigation {
+    background-color : lightgray;
+    padding: 0;
+    margin: 10px;
+    position: absolute;
+    margin:auto;
+}
+
+.navigation-dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+.navigation-dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 12px 16px;
+  z-index: 1;
+}
+
+.navigation-dropdown:hover .navigation-dropdown-content {
+  display: block;
+}
+
+.shop {
+  display:flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 60%;
+  margin:auto;
+}
+
+.shop-article {
+  margin: 10px 5px;
+}
