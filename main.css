@@ -1,16 +1,51 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
 .navigation {
-    background-color : lightgray;
-    padding: 0;
-    margin: 10px;
-    position: absolute;
-    margin:auto;
+  background-color : gainsboro;
+  position: static;
+  margin:auto;
+  display:flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: left;
+  padding: 10px 22% 0 22%;
+  height: 100px;
 }
 
 .navigation-dropdown {
-    position: relative;
-    display: inline-block;
-  }
-  
+  position: relative;
+  display: inline-block;
+  width: 12%;
+  border-top: 2px solid darkgray;
+  border-bottom: 2px solid darkgray;
+  padding: 5px 0 0 4px;
+  margin: 5px 20px;;
+}
+
+.navigation-dropdown-title {
+
+} 
+
+i {
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+}
+
+.arrow {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+
+.navigation-dropdown:hover {
+  transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
+}
+
 .navigation-dropdown-content {
   display: none;
   position: absolute;
@@ -19,6 +54,13 @@
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   padding: 12px 16px;
   z-index: 1;
+}
+
+.navigaion-dropdown-content-text{
+  background-color: white;
+  padding: 10px;
+  border: 1px solid white;
+  border-radius: 5px;
 }
 
 .navigation-dropdown:hover .navigation-dropdown-content {
@@ -30,10 +72,25 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  width: 60%;
+  width: 65%;
+  height: 400px;
   margin:auto;
+  padding: 0;
+  z-index: 1;
 }
 
 .shop-article {
   margin: 10px 5px;
+  width: 250px;
+}
+
+.shop-article-heart {
+  position: relative;
+  bottom: 60px;
+  left: 170px;
+  z-index: 2;
+}
+
+.shop-article-heart:hover {
+  content: url('pictures/heart_filled.png');
 }
