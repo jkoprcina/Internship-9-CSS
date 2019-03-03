@@ -8,9 +8,10 @@ body {
   position: static;
   margin:auto;
   display:flex;
+  flex-grow: inherit;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: left;
+  justify-content: space-between;
   padding: 10px 22% 0 22%;
   height: 100px;
 }
@@ -18,32 +19,22 @@ body {
 .navigation-dropdown {
   position: relative;
   display: inline-block;
-  width: 12%;
+  width: 120px;
+  height: 25px;
   border-top: 2px solid darkgray;
   border-bottom: 2px solid darkgray;
   padding: 5px 0 0 4px;
   margin: 5px 20px;;
 }
 
-.navigation-dropdown-title {
-
-} 
-
-i {
-  border: solid black;
-  border-width: 0 3px 3px 0;
-  display: inline-block;
-  padding: 3px;
+.navigation-dropdown-icon {
+  width: 15px;
+  height: 15px;
+  position:right;
 }
 
-.arrow {
-  transform: rotate(45deg);
-  -webkit-transform: rotate(45deg);
-}
-
-.navigation-dropdown:hover {
-  transform: rotate(-135deg);
-  -webkit-transform: rotate(-135deg);
+.navigation-dropdown:hover .navigation-dropdown-icon {
+  content: url(pictures/arrow_up.png);
 }
 
 .navigation-dropdown-content {
@@ -93,4 +84,66 @@ i {
 
 .shop-article-heart:hover {
   content: url('pictures/heart_filled.png');
+}
+
+@media screen and (max-width: 1700px) {
+  .navigation{
+    padding: 0 15%;
+    height: 150px;
+  }
+}
+@media screen and (max-width: 1600px) {
+  .shop{
+    width:40%;
+  }
+}
+
+@media screen and (max-width: 1350px) {
+  .navigation{
+    padding: 0 22%;
+    justify-content: left;
+  }
+  .shop {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .navigation{
+    padding: 0 15%;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .navigation{
+    height: 190px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .navigation{
+    height: 280px;
+    padding: 0 22%;
+    justify-content: space-between;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .navigation{
+    padding: 0 5%;
+    height: 280px;
+    justify-content: left;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .navigation{
+    padding: 0 2%;
+    height: 280px;
+    justify-content: left;
+  }
+  .navigation-dropdown{
+    font-size: 13px;
+    width: 100px;
+  }
 }
